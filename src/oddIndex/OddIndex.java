@@ -2,13 +2,13 @@ package oddIndex;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class OddIndex {
 	public String leaveOddIndexName(List<String> listName){
-		AtomicInteger index= new AtomicInteger();
-		Object[] result = listName.stream().map(name -> index.getAndIncrement() + ". " + name).toArray();
+	return 	IntStream.range(0,listName.size()).filter(i->i%2!=0).mapToObj(i->i+". "+listName.get(i)).collect(Collectors.joining(", "));
 
-		return new StringTransformator().transformToStringForOdd(result);
 	}
 
 }
