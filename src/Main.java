@@ -30,15 +30,10 @@ public class Main {
 		String task2 = new BigLetterAndSorted().makeBigLetterAndSorted(listName);
 		System.out.println(task2);
 //	//Task 3
-		ArrayList arrayList = new ArrayList<>();
-		arrayList.add("\"1");
-		arrayList.add(2);
-		arrayList.add("0\"");
-		arrayList.add("\"4");
-		arrayList.add("5\"");
 
+		String [] arrayString = new String[]{"\"1","2","0\"","\"4","5\""};
 		StringToInt task3 = new StringToInt();
-		task3.toInt(arrayList);
+		System.out.println("task3.sortNumbers(arrayString) = " + task3.sortNumbers(arrayString));
 //	//Task 4
 //		new GeneratorRandom().generate(25_214_903_917L,11,48).forEach(System.out::println);
 //	//Task 5

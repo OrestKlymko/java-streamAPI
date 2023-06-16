@@ -1,18 +1,17 @@
 package oddIndex;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.Arrays;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class StringToInt {
-	public String toInt(List arrayList){
-		return arrayList.stream()
-				.map(i -> i.toString().replace("\"", ""))
-				.mapToInt(i -> Integer.parseInt(String.valueOf(i)))
+	public String sortNumbers(String[] array){
+		return Arrays.stream(array)
+				.map(i->i.replace("\"", ""))
+				.mapToInt(i -> Integer.parseInt(i))
 				.sorted()
-				.mapToObj(String::valueOf)
+				.mapToObj(i->String.valueOf(i))
 				.collect(Collectors.joining(","));
+
 
 	}
 }
