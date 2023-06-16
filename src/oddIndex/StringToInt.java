@@ -5,11 +5,14 @@ import java.util.stream.Collectors;
 
 public class StringToInt {
 	public String sortNumbers(String[] array){
-		return Arrays.stream(array)
-				.map(i->i.replace("\"", ""))
-				.mapToInt(i -> Integer.parseInt(i))
+		return Arrays.stream(Arrays.stream(array)
+				.map(i->i.replace("\"","")
+						.replace(" ",""))
+				.collect(Collectors.joining(","))
+				.split(","))
+				.mapToInt(Integer::parseInt)
 				.sorted()
-				.mapToObj(i->String.valueOf(i))
+				.mapToObj(String::valueOf)
 				.collect(Collectors.joining(","));
 
 

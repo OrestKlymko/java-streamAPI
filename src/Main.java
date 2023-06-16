@@ -25,23 +25,23 @@ public class Main {
 
 		//Task 1
 		String task1 = new OddIndex().leaveOddIndexName(listName);
-		System.out.println(task1);
+//		System.out.println(task1);
 //		//Task 2
 		String task2 = new BigLetterAndSorted().makeBigLetterAndSorted(listName);
-		System.out.println(task2);
+//		System.out.println(task2);
 //	//Task 3
 
-		String [] arrayString = new String[]{"\"1","2","0\"","\"4","5\""};
-		StringToInt task3 = new StringToInt();
-		System.out.println("task3.sortNumbers(arrayString) = " + task3.sortNumbers(arrayString));
+		String[] arrayString = new String[]{"1 ,2,0", "4, 5"};
+		String task3  = new StringToInt().sortNumbers(arrayString);
+		System.out.println("task3 = " + task3);
 //	//Task 4
 //		new GeneratorRandom().generate(25_214_903_917L,11,48).forEach(System.out::println);
 //	//Task 5
-		Stream<Integer> firstStream = Stream.of(1, 2, 3, 4, 5);
-		Stream<Integer> secondStream = Stream.of(6, 7, 8);
-
-		Stream<Integer> resultStream = MixOfStreams.zip(firstStream, secondStream);
-		resultStream.forEach(System.out::println);
+//		Stream<Integer> firstStream = Stream.of(1, 2, 3, 4, 5);
+//		Stream<Integer> secondStream = Stream.of(6, 7, 8);
+//
+//		Stream<Integer> resultStream = MixOfStreams.zip(firstStream, secondStream);
+//		resultStream.forEach(System.out::println);
 
 
 	}
